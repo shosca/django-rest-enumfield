@@ -10,14 +10,17 @@ cache:
     - $HOME/.cache/pre-commit
 
 python:
+  - "2.7"
+  - "3.6"
   - "3.7"
+  - "pypy"
+  - "pypy3"
 
 install:
-  - pip install -U -r requirements.txt
+  - pip install tox-travis
 
 script:
-  - make lint
-  - make coverage
+  - tox
 
 after_success:
   coveralls
