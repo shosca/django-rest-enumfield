@@ -45,8 +45,8 @@ This will cause the enum's value instead of the name to be represented.
 
 Thats it.
 
-.. |Build Status| image:: https://travis-ci.org/shosca/django-rest-enumfield.svg?branch=master
-   :target: https://travis-ci.org/shosca/django-rest-enumfield
+.. |Build Status| image:: https://travis-ci.com/shosca/django-rest-enumfield.svg?branch=master
+   :target: https://travis-ci.com/shosca/django-rest-enumfield
 .. |PyPI version| image:: https://badge.fury.io/py/django-rest-enumfield.svg
    :target: https://badge.fury.io/py/django-rest-enumfield
 .. |Coveralls Status| image:: https://coveralls.io/repos/github/shosca/django-rest-enumfield/badge.svg?branch=master
