@@ -4,7 +4,7 @@ VERSION=$(shell python setup.py --version)
 NEXT=$(shell semver -i $(BUMP) $(VERSION))
 COVERAGE_FLAGS?=--cov-fail-under=100
 
-.PHONY: docs $(FILES)
+.PHONY: $(FILES)
 
 help:
 	@for f in $(MAKEFILE_LIST) ; do \
@@ -55,14 +55,8 @@ test:  ## run tests
 check:  ## run all tests
 	tox
 
-history: docs  ## generate HISTORY.rst
+history: ## generate HISTORY.rst
 	gitchangelog > HISTORY.rst
-
-docs:  ## generate docs
-	$(MAKE) -C docs html
-
-livedocs:  ## generate docs live
-	$(MAKE) -C docs live
 
 version:  # print version
 	@echo $(VERSION)
