@@ -9,7 +9,7 @@ class EnumField(fields.ChoiceField):
         self.to_choice = to_choice
         kwargs["choices"] = [to_choice(e) for e in self.enum_class]
         kwargs.pop("max_length", None)
-        super(EnumField, self).__init__(**kwargs)
+        super().__init__(**kwargs)
 
     def to_internal_value(self, data):
         try:
