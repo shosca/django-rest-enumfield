@@ -49,3 +49,4 @@ docs/_build
 .venv
 .pytest_cache
 .python-version
+.mypy_cache
