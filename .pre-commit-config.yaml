@@ -7,13 +7,24 @@ repos:
     language_version: python3
 
 - repo: https://github.com/psf/black
-  rev: 19.3b0
+  rev: 19.10b0
   hooks:
   - id: black
     language_version: python3
 
+- repo: https://gitlab.com/pycqa/flake8
+  rev: 3.8.3
+  hooks:
+  - id: flake8
+    exclude: deployment/roles
+    additional_dependencies:
+      - flake8-blind-except
+      - flake8-bugbear
+      - flake8-comprehensions
+      - flake8-debugger
+
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v2.3.0
+  rev: v3.2.0
   hooks:
   - id: check-added-large-files
   - id: check-builtin-literals
@@ -26,10 +37,8 @@ repos:
   - id: check-xml
   - id: check-yaml
   - id: debug-statements
-  - id: fix-encoding-pragma
-  - id: flake8
-    additional_dependencies:
-      - flake8-bugbear
-      - flake8-django
-      - flake8-comprehensions
   - id: trailing-whitespace
+  - id: mixed-line-ending
+    args: [--fix=lf]
+  - id: pretty-format-json
+    args: [--autofix]
