@@ -34,7 +34,7 @@ jobs:
       run: |
         tox -f ${{ matrix.container.toxenv }}
     - name: Upload Coverage
-      run: coveralls
+      run: coveralls --service=github
       env:
         GITHUB_TOKEN: ${{ secrets.github_token }}
         COVERALLS_FLAG_NAME: ${{ matrix.container.image }}
