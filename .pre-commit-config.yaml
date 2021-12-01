@@ -7,13 +7,13 @@ repos:
     language_version: python3
 
 - repo: https://github.com/psf/black
-  rev: 19.10b0
+  rev: 21.11b1
   hooks:
   - id: black
     language_version: python3
 
-- repo: https://gitlab.com/pycqa/flake8
-  rev: 3.8.3
+- repo: https://github.com/PyCQA/flake8
+  rev: 4.0.1
   hooks:
   - id: flake8
     exclude: deployment/roles
@@ -24,7 +24,7 @@ repos:
       - flake8-debugger
 
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v3.2.0
+  rev: v4.0.1
   hooks:
   - id: check-added-large-files
   - id: check-builtin-literals
