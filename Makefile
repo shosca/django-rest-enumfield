@@ -30,7 +30,7 @@ clean-test:  ## remove test and coverage artifacts
 	rm -rf .tox/ .coverage htmlcov/
 
 lint:  ## run pre-commit hooks on all files
-	if python -c "import sys; exit(1) if sys.version_info.major < 3 else exit(0)"; then \
+	-if python -c "import sys; exit(1) if (sys.version_info.major, sys.version_info.minor) < (3, 7) else exit(0)"; then \
 		pre-commit run --all-files ; \
 	fi
 
