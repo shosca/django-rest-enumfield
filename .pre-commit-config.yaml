@@ -1,19 +1,19 @@
 ---
 repos:
 - repo: https://github.com/miki725/importanize
-  rev: '0.8.0-alpha1'
+  rev: '0.8.0-alpha2'
   hooks:
   - id: importanize
     language_version: python3
 
 - repo: https://github.com/psf/black
-  rev: 22.10.0
+  rev: 24.3.0
   hooks:
   - id: black
     language_version: python3
 
 - repo: https://github.com/PyCQA/flake8
-  rev: 5.0.4
+  rev: 7.0.0
   hooks:
   - id: flake8
     exclude: deployment/roles
@@ -24,7 +24,7 @@ repos:
       - flake8-debugger
 
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.3.0
+  rev: v4.5.0
   hooks:
   - id: check-added-large-files
   - id: check-builtin-literals
